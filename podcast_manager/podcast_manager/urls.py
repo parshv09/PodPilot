@@ -39,6 +39,7 @@ yasg_schema_view = get_yasg_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('users.urls')),
+    path('api/manage/',include('podcasts.urls')),
     
      # drf-yasg (Swagger)
     re_path(r'^swagger/$', yasg_schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
