@@ -44,6 +44,7 @@ INSTALLED_APPS = [
       # Third-party
     'rest_framework',
     'rest_framework_simplejwt',
+    'corsheaders',
     
     #local apps
     'users',
@@ -87,6 +88,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'podcast_manager.urls'
@@ -168,3 +170,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",   # React local dev
+    "http://localhost:5173",  # vite+react frontend
+]
