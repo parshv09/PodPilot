@@ -1,0 +1,111 @@
+[33mcommit de21620efff1c8cfce7b0dc57210d7811479363git 0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sun Aug 31 19:31:57 2025 +0530
+
+    trying to test the image
+
+[33mcommit 1a3a312195638035e8805d08e3b1c64f763e6b00[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 23:47:21 2025 +0530
+
+    Add gunicorn for production
+
+[33mcommit b7122da778660185a2537c183448eed706ddb6f4[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 23:12:02 2025 +0530
+
+    Add gunicorn for production
+
+[33mcommit 8584e335cda46754e7b53e2cf89955034597f3f2[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 23:03:22 2025 +0530
+
+    Auth and podcast initial
+
+[33mcommit 863b20652ee3e6ccb911fbf4d75a790ccf48c8b4[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 22:56:52 2025 +0530
+
+    Auth and podcast initial
+
+[33mcommit 4f13ae18700d89d5de20fffa95568e535cfebd1b[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 22:47:44 2025 +0530
+
+    Auth and podcast initial
+
+[33mcommit 201ce5e5739065cc3393bdf807ea250ad9a9a357[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 22:32:47 2025 +0530
+
+    Auth and podcast initial
+
+[33mcommit 6589d58b223ddcb51259382becf7f54a85f352ba[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 22:30:04 2025 +0530
+
+    Auth and podcast initial
+
+[33mcommit e12c39fa27115c12b4800447bf7b411dbb8ecf8f[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 22:25:42 2025 +0530
+
+    Auth and podcast initial
+
+[33mcommit e1c71379ad07cd4af6dc6966b38dbfb4dde4989a[m[33m ([m[1;32mparshv-backend[m[33m)[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Sat Aug 30 22:05:47 2025 +0530
+
+    Auth and podcast initial
+
+[33mcommit edcdf77ddaa7091482477118af3794f13fff0c91[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Fri Aug 29 17:36:02 2025 +0530
+
+    podacst and episode with login
+
+[33mcommit 6fd706d6e50cb2ff93cff559d111ac52b8b10e45[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Wed Aug 13 13:52:40 2025 +0530
+
+    authentication
+
+[33mcommit 91eabee1bce5c11f7ef4f0cba3f371c00b72794e[m
+Merge: 6eace30 6968914
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Wed Aug 13 13:33:02 2025 +0530
+
+    Merge branch 'parshv-backend'
+
+[33mcommit 6968914331bb46607a29c7e8452af68ec2604c80[m[33m ([m[1;31morigin/parshv-backend[m[33m)[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Wed Aug 13 13:28:23 2025 +0530
+
+    initial commit
+
+[33mcommit 6eace30e07d44dd7cf499fbc28e058923307daf0[m
+Merge: cc0d134 4f09f44
+Author: Parshv Athane <131185394+parshv09@users.noreply.github.com>
+Date:   Wed Aug 13 00:54:22 2025 +0530
+
+    Merge pull request #1 from parshv09/parshv-backend
+    
+    Project started
+
+[33mcommit 4f09f4476d89280bd96cfa643f726075b9158a0b[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Wed Aug 13 00:23:39 2025 +0530
+
+    Project started
+
+[33mcommit cc0d134711f0c492ea2bf41b55c9401b65b5daad[m
+Author: Parshv Athane <parshvrajkumarathane@gmail.com>
+Date:   Wed Aug 13 00:23:39 2025 +0530
+
+    Project started
+
+[33mcommit 21fa0deb97bd333b7fbe26ff5730261a23fe0aff[m
+Author: Parshv Athane <131185394+parshv09@users.noreply.github.com>
+Date:   Tue Aug 5 16:01:55 2025 +0530
+
+    Initial commit
