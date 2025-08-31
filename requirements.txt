@@ -13,3 +13,6 @@ psycopg2-binary==2.9.10
 django-allauth
 dj-rest-auth
 cryptography
+google-auth==2.31.0
+requests>=2.32.0
+

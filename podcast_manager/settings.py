@@ -152,12 +152,16 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 
+
 AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-    "django.contrib.auth.backends.ModelBackend",
-    # `allauth` specific authentication methods, such as login by e-mail
-    "allauth.account.auth_backends.AuthenticationBackend",
+    'social_core.backends.google.GoogleOAuth2',  # ✅ new
+    'django.contrib.auth.backends.ModelBackend', # already there
 )
+
+# settings.py
+GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
+
+GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_SECRET_KEY")
 
 SOCIALACCOUNT_PROVIDERS = {
     "google": {
