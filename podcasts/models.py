@@ -15,12 +15,16 @@ class Podcast(models.Model):
     )
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
+    category = models.CharField(max_length=100, blank=True)  # New field
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="draft")
     scheduled_date = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)  # New field
+    is_featured = models.BooleanField(default=False)  # New field to highlight popular podcasts
 
     def __str__(self):
         return self.title
+
 
 
 class Episode(models.Model):
@@ -37,9 +41,13 @@ class Episode(models.Model):
     )
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
+    duration = models.DurationField(null=True, blank=True)  # New field for length of episode
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="draft")
     scheduled_date = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)  # New field
+    audio_file = models.FileField(upload_to='episodes/', null=True, blank=True)  # Placeholder for future use
 
     def __str__(self):
         return f"{self.title} ({self.status})"
+
