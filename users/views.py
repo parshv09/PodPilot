@@ -37,7 +37,7 @@ class LoginView(generics.GenericAPIView):
             'user': UserSerializer(user).data
         })
 
-User = get_user_model()
+
 User = get_user_model()
 
 class GoogleLoginView(APIView):
@@ -69,13 +69,15 @@ class GoogleLoginView(APIView):
                 defaults={
                     "first_name": first_name,
                     "last_name": last_name,
+                    "profile_image_url": picture
                 }
             )
 
-            # Update profile image if new
-            if created and picture:
-                user.profile_image = picture
+             # If user already existed, update profile image if needed
+            if not created and picture and user.profile_image_url != picture:
+                user.profile_image_url = picture
                 user.save()
+
 
             # Generate JWT tokens
             refresh = RefreshToken.for_user(user)
@@ -87,7 +89,7 @@ class GoogleLoginView(APIView):
                     "email": user.email,
                     "first_name": user.first_name,
                     "last_name": user.last_name,
-                    "picture": picture,
+                    "profile_image": user.profile_image.url if user.profile_image else user.profile_image_url,
                 }
             })
 

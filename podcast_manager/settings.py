@@ -49,6 +49,10 @@ INSTALLED_APPS = [
     'drf_spectacular_sidecar',
 ]
 
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Keep default
+]
 AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
