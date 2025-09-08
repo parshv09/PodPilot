@@ -3,14 +3,14 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny,IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import User
-from .serializers import RegisterSerializer, LoginSerializer, UserSerializer
+from .serializers import RegisterSerializer, LoginSerializer, UserSerializer,VerifyOTPSerializer,RequestOTPSerializer
 from rest_framework import status
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from google.oauth2 import id_token 
 from google.auth.transport import requests 
 from rest_framework.views import APIView
-
+from .models import EmailOTP
 
 
 class RegisterView(generics.CreateAPIView):
@@ -112,3 +112,37 @@ class GoogleLoginView(APIView):
             return Response({"error": "Invalid Google token"}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response({"error": f"Server error: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+class RequestOTPView(generics.GenericAPIView):
+    serializer_class = RequestOTPSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response({"message": "OTP sent to email."}, status=status.HTTP_200_OK)
+
+
+class VerifyOTPView(generics.GenericAPIView):
+    serializer_class = VerifyOTPSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.save()
+
+        # refresh = RefreshToken.for_user(user)
+
+        return Response({
+            "message": "Registration successful.Please log in to continue.",
+            # "refresh": str(refresh),
+            # "access": str(refresh.access_token),
+            # "user": {
+            #     "id": user.id,
+            #     "email": user.email,
+            #     "first_name": user.first_name,
+            #     "last_name": user.last_name,
+            # }
+        }, status=status.HTTP_201_CREATED)
