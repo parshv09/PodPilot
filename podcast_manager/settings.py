@@ -146,7 +146,7 @@ CORS_ALLOW_ALL_ORIGINS = DEBUG  # allow all only in dev
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",   # React dev
     "http://localhost:5173",   # Vite dev
-    "https://your-frontend.vercel.app",  # prod frontend
+    "https://podpilot-frontend.vercel.app",  # prod frontend
 ]
 
 # django-allauth settings
